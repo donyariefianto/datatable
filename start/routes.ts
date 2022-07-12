@@ -17,7 +17,7 @@
 | import './routes/customer''
 |
 */
-import User from 'App/Models/User'
+
 import Route from '@ioc:Adonis/Core/Route'
 
 Route.get('/', async ({ view }) => {
@@ -25,6 +25,8 @@ Route.get('/', async ({ view }) => {
 })
 Route.get('/posts', 'PostsController.index');
 Route.get('/ambil', 'PostsController.getData');
+Route.get('/stok','StoksController.getData');
+Route.get('/stok/all','StoksController.getAllData');
 
 // Route.group(() => {
 //   Route.post('users', 'UsersController.store')
